@@ -1,14 +1,6 @@
-cmake_minimum_required(VERSION 3.15...3.25)
+cmake_minimum_required(VERSION 3.15)
 set(CMAKE_CXX_STANDARD 11)
-
-project(organon
-  VERSION
-    1.0
-  DESCRIPTION
-    "im taking a shit"
-  LANGUAGES
-    CXX
-)
+project(organya LANGUAGES CXX)
 
 set(PROJECT_SOURCES 
     ./source/Click.cpp
@@ -70,5 +62,6 @@ set(CMAKE_RC_COMPILER llvm-rc)
 # code page (-C) 932 is shift JIS, we need to override with UTF-8 (65001)
 set(CMAKE_RC_COMPILE_OBJECT "<CMAKE_RC_COMPILER> <DEFINES> -I ${CMAKE_INCLUDE_PATH} -C 65001 ${rc_flags} -FO <OBJECT> <SOURCE>")
 
-add_executable(organon ${PROJECT_SOURCES} ${PROJECT_RESOURCES})
-target_link_libraries(organon dsound winmm kernel32 gdi32 comdlg32 shell32)
+add_executable(organya ${PROJECT_SOURCES} ${PROJECT_RESOURCES})
+# gleaned from ntldd on the provided exe
+target_link_libraries(organya dsound winmm kernel32 gdi32 comdlg32 shell32)

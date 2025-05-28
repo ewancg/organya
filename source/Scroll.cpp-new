@@ -1,7 +1,0 @@
-#include "Setting.h" 
-#include "DefOrg.h"
-#include "Scroll.h"
-#include "OrgData.h"
-#include <stdio.h>
-#include "resource.h"
-//繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ繝舌

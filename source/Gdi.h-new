@@ -1,5 +1,0 @@
-#include <windows.h>
-#define MAXBITMAP		64
-
-//void PutMusic(void);
-//GDI縺ｮ蛻晄悄蛹
