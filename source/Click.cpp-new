@@ -1,0 +1,7 @@
+#include "Setting.h"
+#include "DefOrg.h"
+#include "OrgData.h"
+#include "Mouse.h"
+#include "Scroll.h"
+#include <cstdint>
+#include <stdio.h>//sprintf繝

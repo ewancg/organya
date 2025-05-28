@@ -1,0 +1,10 @@
+#include <string.h>
+#include "Setting.h"
+#include "DefOrg.h"
+#include "Gdi.h"
+#include "OrgData.h"
+#include "Scroll.h"
+
+#include "rxoFunction.h"
+
+extern int sACrnt;	//遽

@@ -1,0 +1,8 @@
+#include "Setting.h"
+#include "DefOrg.h"
+#include "OrgData.h"
+#include "Sound.h"
+#include "resource.h"
+#include "Scroll.h"
+
+long play_p;//迴ｾ蝨ｨ蜀咲函菴咲ｽｮ

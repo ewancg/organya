@@ -1,0 +1,8 @@
+#include "Setting.h"
+#include "DefOrg.h"
+#include "OrgData.h"
+
+#define MAXBITMAP		64
+
+HBITMAP hBmp[MAXBITMAP];
+HBITMAP hbWork;//縺

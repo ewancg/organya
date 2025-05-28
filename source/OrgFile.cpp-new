@@ -1,0 +1,12 @@
+#include <string.h>
+#include "Setting.h"
+#include "Gdi.h"
+#include "DefOrg.h"
+#include "OrgData.h"
+#include <stdio.h>
+#include "Sound.h"
+#include "resource.h"
+#include "Scroll.h"
+#include "rxoFunction.h"
+
+//譖ｲ縺ｮPATH縺ｯ縺薙％縺ｫ鄂ｮ縺

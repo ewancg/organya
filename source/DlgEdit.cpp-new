@@ -1,0 +1,13 @@
+#include "Setting.h"
+#include "DefOrg.h"
+#include <string.h>
+#include <stdio.h>
+#include "Sound.h"
+#include "resource.h"
+#include "OrgData.h"
+#include "Gdi.h"
+#include "rxoFunction.h"
+
+extern HWND hDlgPlayer;
+extern HWND hDlgTrack;
+extern NOTECOPY nc_Select; //驕ｸ謚樒ｯ
