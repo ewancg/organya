@@ -3,9 +3,9 @@
 #include "OrgData.h"
 #include "Mouse.h"
 #include "Scroll.h"
-#include <cstdint>
 #include <stdio.h>//sprintfテスト用
 #include <string.h>//sprintfテスト用
+#include <winnt.h>
 #include "rxoFunction.h"
 #include "resource.h"
 
@@ -338,7 +338,7 @@ void ClickProcL(WPARAM wParam, LPARAM lParam)
 	if(mouse_x < 64){
 //		if(mouse_x >= 0 && mouse_y >= 0 && mouse_y < 288+WDWHEIGHTPLUS){//鍵盤
 		if(mouse_x >= 0 && mouse_y >= 0 && mouse_y < WHeight+288-WHNM){//鍵盤
-            org_data.TouchKeyboard(uint8_t(95 - (mouse_y/12 + scr_v)));//96*12は楽譜の縦サイズ
+            org_data.TouchKeyboard(UINT8(95 - (mouse_y/12 + scr_v)));//96*12は楽譜の縦サイズ
 		}
 		if(mouse_x >= 0 && mouse_y >= WHeight+288-WHNM+144 && mouse_y < WHeight+288-WHNM+144+16){//Selectの部位 2014.05.01
 			ChangeSelAlwaysCurrent();

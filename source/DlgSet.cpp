@@ -156,7 +156,7 @@ void InitSettingDialog(HWND hdwnd)
 	p = MessageString[IDS_GRID_STRING];
 	for(i = 0; i < NUMGRIDA; i++){
 		for(q = grid[i].name; *p != 0; p++, q++)*q = *p; //実質strcpy
-		*q = 0; p++; //ポインタを'¥0'の次に
+        *q = 0; p++; //ポインタを'\0'の次に
 	}
 
 	//表示グリッドの初期化//////////////////
@@ -902,9 +902,9 @@ bool SavePVIFile(HWND hdwnd, char *FileName)
 	int t,r;
 	for(t=0;t<MAXTRACK;t++){
 		r = GetText(hdwnd , txt_Pan[t]);
-		fprintf(fp,"%d¥n",r);
+        fprintf(fp,"%d\n",r);
 		r = GetText(hdwnd , txt_Vol[t]);
-		fprintf(fp,"%d¥n",r);
+        fprintf(fp,"%d\n",r);
 	}
 	fclose(fp);
 	return true;
@@ -931,8 +931,8 @@ bool GetSetPVInitFile(HWND hdwnd, int IsSave, int iQuiet)
 	ofn.lStructSize = sizeof(OPENFILENAME);
 	ofn.hwndOwner   = hdwnd;
 	ofn.hInstance   = hInst;
-	//ofn.lpstrFilter = "パン／ボリューム初期値データ[*.pvi]¥0*.pvi¥0全ての形式 [*.*]¥0*.*¥0¥0"; //パン／ボリューム初期値データ[*.pvi]¥0*.pvi¥0全ての形式 [*.*]¥0*.*¥0¥0	// 2014.10.19 D
-	ofn.lpstrFilter = MessageString[IDS_STRING108]; //パン／ボリューム初期値データ[*.pvi]¥0*.pvi¥0全ての形式 [*.*]¥0*.*¥0¥0	// 2014.10.19 A
+    //ofn.lpstrFilter = "パン／ボリューム初期値データ[*.pvi]\0*.pvi\0全ての形式 [*.*]\0*.*\0\0"; //パン／ボリューム初期値データ[*.pvi]\0*.pvi\0全ての形式 [*.*]\0*.*\0\0	// 2014.10.19 D
+    ofn.lpstrFilter = MessageString[IDS_STRING108]; //パン／ボリューム初期値データ[*.pvi]\0*.pvi\0全ての形式 [*.*]\0*.*\0\0	// 2014.10.19 A
 	ofn.lpstrFile   = init_file;
 	ofn.nMaxFile    = MAX_PATH;
 	ofn.lpstrDefExt = "pvi";
@@ -1099,8 +1099,8 @@ BOOL CALLBACK DialogHelp(HWND hdwnd, UINT message, WPARAM wParam, LPARAM lParam)
 		cc = (char*)LockResource(LoadResource(NULL, hrscr));// リソースのアドレスを取得
 		cf = HelpString; ce = cc;
 		do{
-			if(*ce=='¥n'){ //改行コード変換（ラインフィードを加えないといけないらしい）
-				*cf='¥r';
+            if(*ce=='\n'){ //改行コード変換（ラインフィードを加えないといけないらしい）
+                *cf='\r';
 				cf++;
 			}
 			*cf = *ce;

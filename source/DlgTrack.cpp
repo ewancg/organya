@@ -147,64 +147,64 @@ BOOL CALLBACK DialogTrack(HWND hdwnd, UINT message, WPARAM wParam, LPARAM lParam
 		SetDlgItemText(hdwnd,IDE_VIEWWAIT,str);
 		//itoa(org_data.track,str,10);
 		str[0]='1';
-		str[1]='¥0';
+        str[1]='\0';
 		SetDlgItemText(hdwnd,IDE_VIEWTRACK,str);
 		for(i = 0; i < MAXTRACK; i++)org_data.mute[i] = 0;
 		HANDLE hBmp;
 		hBmp = (HBITMAP)LoadImage( hInst, "B_SOLO", IMAGE_BITMAP, 31, 17, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_BTN_SOLO, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_BTN_SOLO, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 		hBmp = (HBITMAP)LoadImage( hInst, "B_LOUPE_PLUS", IMAGE_BITMAP, 24, 24, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_BTN_LOUPE1, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_BTN_LOUPE1, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 		hBmp = (HBITMAP)LoadImage( hInst, "B_LOUPE_MINUS", IMAGE_BITMAP, 24, 24, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_BTN_LOUPE2, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_BTN_LOUPE2, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_1", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK0, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK0, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_2", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK1, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK1, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_3", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK2, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK2, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_4", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK3, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK3, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_5", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK4, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK4, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_6", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK5, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK5, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_7", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK6, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK6, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_8", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK7, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK7, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_Q", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK8, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK8, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_W", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK9, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK9, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_E", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK10, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK10, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_R", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK11, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK11, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_T", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK12, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK12, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_Y", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK13, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK13, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_U", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK14, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK14, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		hBmp = (HBITMAP)LoadImage( hInst, "B_TRACK_I", IMAGE_BITMAP, 14, 21, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_TRACK15, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_TRACK15, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 
 		return 1;
 	case WM_MOUSEMOVE:

@@ -72,15 +72,15 @@ BOOL CALLBACK DialogPlayer(HWND hdwnd, UINT message, WPARAM wParam, LPARAM lPara
 		SendDlgItemMessage( hdwnd, IDC_RIGHT, BM_SETIMAGE, IMAGE_BITMAP, (long)hBmp );
 */
 		hBmp = (HBITMAP)LoadImage( hInst, "B_HEAD", IMAGE_BITMAP, 24, 24, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_START, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_START, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 		hBmp = (HBITMAP)LoadImage( hInst, "B_PLAY", IMAGE_BITMAP, 40, 24, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_PLAY, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_PLAY, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 		hBmp = (HBITMAP)LoadImage( hInst, "B_STOP", IMAGE_BITMAP, 40, 24, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_STOP, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_STOP, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 		hBmp = (HBITMAP)LoadImage( hInst, "B_LEFT", IMAGE_BITMAP, 24, 24, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_LEFT, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_LEFT, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 		hBmp = (HBITMAP)LoadImage( hInst, "B_RIGHT", IMAGE_BITMAP, 24, 24, LR_DEFAULTCOLOR );
-        SendDlgItemMessage( hdwnd, IDC_RIGHT, BM_SETIMAGE, IMAGE_BITMAP, (uintptr_t)hBmp );
+        SendDlgItemMessage( hdwnd, IDC_RIGHT, BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBmp );
 		return 1;
 	case WM_MOUSEMOVE:
 		if(wParam & MK_LBUTTON){

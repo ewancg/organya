@@ -39,7 +39,7 @@ void OrgData::PlayData(void)
 		if(now_leng[i] > 0)now_leng[i]--;
 	}
 	//ドラムの再生
-    for(auto i = MAXMELODY; i < MAXTRACK; i++){
+    for(UCHAR i = MAXMELODY; i < MAXTRACK; i++){
 		if(np[i] != NULL &&play_p == np[i]->x ){//音が来た。
 			if(np[i]->y != KEYDUMMY){//ならす
 				if(mute[i] == 0)PlayDramObject(np[i]->y,1,i-MAXMELODY);

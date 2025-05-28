@@ -34,19 +34,19 @@ LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
 
 1 TEXTINCLUDE DISCARDABLE 
 BEGIN
-    "resource.h¥0"
+    "resource.h\0"
 END
 
 2 TEXTINCLUDE DISCARDABLE 
 BEGIN
-    "#include ""afxres.h""¥r¥n"
-    "¥0"
+    "#include ""afxres.h""\r\n"
+    "\0"
 END
 
 3 TEXTINCLUDE DISCARDABLE 
 BEGIN
-    "¥r¥n"
-    "¥0"
+    "\r\n"
+    "\0"
 END
 
 #endif    // APSTUDIO_INVOKED
@@ -127,7 +127,7 @@ BEGIN
                     132,180,8,8
     DEFPUSHBUTTON   "Ok!",IDOK,76,201,39,18
     PUSHBUTTON      "No!",IDCANCEL,117,201,29,18
-    LTEXT           "ｳｪｲﾄ値を入力してください。¥nBPMは換算用のオマケ機能です。",
+    LTEXT           "ｳｪｲﾄ値を入力してください。\nBPMは換算用のオマケ機能です。",
                     IDC_STATIC,13,27,122,17
 END
 
@@ -610,8 +610,8 @@ BEGIN
                     WS_EX_STATICEDGE
     DEFPUSHBUTTON   "Ok!",IDOK,104,163,60,21
     PUSHBUTTON      "キャンセル",IDCANCEL,104,189,60,15
-    CTEXT           "パンポット¥n（０-６-12）",IDC_STATIC,15,5,30,15
-    CTEXT           "ボリューム¥n（０−254）",IDC_STATIC,45,5,35,20
+    CTEXT           "パンポット\n（０-６-12）",IDC_STATIC,15,5,30,15
+    CTEXT           "ボリューム\n（０−254）",IDC_STATIC,45,5,35,20
     CTEXT           "１",IDC_STATIC,5,32,8,10
     CTEXT           "２",IDC_STATIC,5,47,8,10
     CTEXT           "３",IDC_STATIC,5,62,8,10
@@ -620,8 +620,8 @@ BEGIN
     CTEXT           "６",IDC_STATIC,5,110,8,10
     CTEXT           "７",IDC_STATIC,5,125,8,10
     CTEXT           "８",IDC_STATIC,5,140,8,10
-    CTEXT           "パンポット¥n（０-６-12）",IDC_STATIC,101,5,30,15
-    CTEXT           "ボリューム¥n（０−254）",IDC_STATIC,131,5,35,20
+    CTEXT           "パンポット\n（０-６-12）",IDC_STATIC,101,5,30,15
+    CTEXT           "ボリューム\n（０−254）",IDC_STATIC,131,5,35,20
     CTEXT           "Ｑ",IDC_STATIC,90,32,8,10
     CTEXT           "Ｗ",IDC_STATIC,90,47,8,10
     CTEXT           "Ｅ",IDC_STATIC,90,62,8,10
@@ -913,15 +913,15 @@ ORGANYAMENU MENU DISCARDABLE
 BEGIN
     POPUP "ファイル (&F)"
     BEGIN
-        MENUITEM "新規作成(&N)...¥tCtrl+Alt+I", IDM_INIT
-        MENUITEM "開く (&O)...¥tCtrl+O",        IDM_LOAD
-        MENUITEM "独自のﾀﾞｲｱﾛｸﾞで開く(P)...¥tHome", IDM_LOAD2
+        MENUITEM "新規作成(&N)...\tCtrl+Alt+I", IDM_INIT
+        MENUITEM "開く (&O)...\tCtrl+O",        IDM_LOAD
+        MENUITEM "独自のﾀﾞｲｱﾛｸﾞで開く(P)...\tHome", IDM_LOAD2
         MENUITEM SEPARATOR
-        MENUITEM "上書き保存 (&S)¥tCtrl+S",     IDM_SAVEOVER
-        MENUITEM "別名で保存 (&W)...¥tShift+Ctrl+S", IDM_SAVENEW
+        MENUITEM "上書き保存 (&S)\tCtrl+S",     IDM_SAVEOVER
+        MENUITEM "別名で保存 (&W)...\tShift+Ctrl+S", IDM_SAVENEW
         MENUITEM SEPARATOR
         MENUITEM "▼ エクスポート",             ID_EXPORT, INACTIVE
-        MENUITEM "標準MIDIﾌｧｲﾙ(*.mid) (&M)...¥tCtrl+Alt+M", IDM_EXPORT_MIDI
+        MENUITEM "標準MIDIﾌｧｲﾙ(*.mid) (&M)...\tCtrl+Alt+M", IDM_EXPORT_MIDI
         MENUITEM SEPARATOR
         MENUITEM SEPARATOR
         MENUITEM "▼ 最近使ったファイル",       ID_MENUITEM40135, INACTIVE
@@ -940,30 +940,30 @@ BEGIN
     END
     POPUP "曲設定 (&S)"
     BEGIN
-        MENUITEM "波形・音色選択(&W)...¥tF1",   IDM_DLGWAVE
-        MENUITEM "テンポ・拍子属性(&T)...¥tF2", IDM_DLGSETTING
-        MENUITEM "パン／ボリューム初期値(R)...¥tF3", IDM_DLGDEFAULT
+        MENUITEM "波形・音色選択(&W)...\tF1",   IDM_DLGWAVE
+        MENUITEM "テンポ・拍子属性(&T)...\tF2", IDM_DLGSETTING
+        MENUITEM "パン／ボリューム初期値(R)...\tF3", IDM_DLGDEFAULT
         MENUITEM SEPARATOR
         MENUITEM "音譜残量(&O)...",             IDM_DLGUSED
     END
     POPUP "範囲編集 (&E)"
     BEGIN
-        MENUITEM "元に戻す(&U)¥tCtrl+Z",        IDM_UNDO, GRAYED
-        MENUITEM "やり直す(&R)¥tCtrl+Y",        IDM_REDO, GRAYED
+        MENUITEM "元に戻す(&U)\tCtrl+Z",        IDM_UNDO, GRAYED
+        MENUITEM "やり直す(&R)\tCtrl+Y",        IDM_REDO, GRAYED
         MENUITEM SEPARATOR
-        MENUITEM "すべて選択(&A)¥tCtrl+A",      IDM_SELECT_ALL
-        MENUITEM "選択範囲を解除(&K)¥tCtrl+D",  IDM_SELECT_RESET
+        MENUITEM "すべて選択(&A)\tCtrl+A",      IDM_SELECT_ALL
+        MENUITEM "選択範囲を解除(&K)\tCtrl+D",  IDM_SELECT_RESET
         MENUITEM SEPARATOR
         MENUITEM SEPARATOR
-        MENUITEM "コピー(&C)...¥tCtrl+F2",      IDM_DLGCOPY
-        MENUITEM "セットコピー(&F)...¥tCtrl+F3", IDM_DLGCOPY2
+        MENUITEM "コピー(&C)...\tCtrl+F2",      IDM_DLGCOPY
+        MENUITEM "セットコピー(&F)...\tCtrl+F3", IDM_DLGCOPY2
         MENUITEM SEPARATOR
-        MENUITEM "パンポット(&P)...¥tCtrl+F4",  IDM_DLGPAN
-        MENUITEM "ボリューム(&V)...¥tF4",       IDM_DLGVOL
-        MENUITEM "トランスポーズ(&T)...¥tShift+F4", IDM_DLGTRANS
+        MENUITEM "パンポット(&P)...\tCtrl+F4",  IDM_DLGPAN
+        MENUITEM "ボリューム(&V)...\tF4",       IDM_DLGVOL
+        MENUITEM "トランスポーズ(&T)...\tShift+F4", IDM_DLGTRANS
         MENUITEM SEPARATOR
-        MENUITEM "消去(&D)...¥tCtrl+Del",       IDM_DLGDELETE
-        MENUITEM "トラック入れ替え(&S)...¥tShift+Ctrl+F4", IDM_DLGSWAP
+        MENUITEM "消去(&D)...\tCtrl+Del",       IDM_DLGDELETE
+        MENUITEM "トラック入れ替え(&S)...\tShift+Ctrl+F4", IDM_DLGSWAP
     END
     POPUP "VOL操作(&1)"
     BEGIN
@@ -992,20 +992,20 @@ BEGIN
     POPUP "VOL操作(&2)"
     BEGIN
         MENUITEM "ﾀﾞﾐｰNOTE自動追加",            IDM_CT_S0, INACTIVE
-        MENUITEM "  (&1)上に凸(伸び)減衰 強¥tCtrl+1", IDM_CT_S1
-        MENUITEM "  (&2)上に凸(伸び)減衰 弱¥tCtrl+2", IDM_CT_S2
-        MENUITEM "  (&3)線形減衰¥tCtrl+3",      IDM_CT_S3
-        MENUITEM "  (&4)下に凸(急な)減衰 弱¥tCtrl+4", IDM_CT_S4
-        MENUITEM "  (&5)下に凸(急な)減衰 強¥tCtrl+5", IDM_CT_S5
-        MENUITEM "  (&6)初期値¥tCtrl+6",        IDM_CT_S6
-        MENUITEM "  (&7)Ｓ字曲線¥tCtrl+7",      IDM_CT_S7
-        MENUITEM "  (&8)最後だけﾁｮｯﾄ減衰¥tCtrl+8", IDM_CT_S8
-        MENUITEM "  (&9)ビブラート減衰¥tCtrl+9", IDM_CT_S9
+        MENUITEM "  (&1)上に凸(伸び)減衰 強\tCtrl+1", IDM_CT_S1
+        MENUITEM "  (&2)上に凸(伸び)減衰 弱\tCtrl+2", IDM_CT_S2
+        MENUITEM "  (&3)線形減衰\tCtrl+3",      IDM_CT_S3
+        MENUITEM "  (&4)下に凸(急な)減衰 弱\tCtrl+4", IDM_CT_S4
+        MENUITEM "  (&5)下に凸(急な)減衰 強\tCtrl+5", IDM_CT_S5
+        MENUITEM "  (&6)初期値\tCtrl+6",        IDM_CT_S6
+        MENUITEM "  (&7)Ｓ字曲線\tCtrl+7",      IDM_CT_S7
+        MENUITEM "  (&8)最後だけﾁｮｯﾄ減衰\tCtrl+8", IDM_CT_S8
+        MENUITEM "  (&9)ビブラート減衰\tCtrl+9", IDM_CT_S9
         MENUITEM SEPARATOR
-        MENUITEM "  (&0)ランダム¥tCtrl+Alt+0",  IDM_CT_S10
-        MENUITEM "  (&1)始点-終点でｸﾞﾗﾃﾞｰｼｮﾝ¥tCtrl+Alt+1", IDM_CT_S11
-        MENUITEM "  (&2)下に凸増幅¥tCtrl+Alt+2", IDM_CT_S12
-        MENUITEM "  (&3)線形増幅¥tCtrl+Alt+3",  IDM_CT_S13
+        MENUITEM "  (&0)ランダム\tCtrl+Alt+0",  IDM_CT_S10
+        MENUITEM "  (&1)始点-終点でｸﾞﾗﾃﾞｰｼｮﾝ\tCtrl+Alt+1", IDM_CT_S11
+        MENUITEM "  (&2)下に凸増幅\tCtrl+Alt+2", IDM_CT_S12
+        MENUITEM "  (&3)線形増幅\tCtrl+Alt+3",  IDM_CT_S13
         MENUITEM "  (&4)未定義",                IDM_CT_S14, GRAYED
         MENUITEM "  (&5)未定義",                IDM_CT_S15, GRAYED
         MENUITEM "  (&6)未定義",                IDM_CT_S16, GRAYED
@@ -1013,37 +1013,37 @@ BEGIN
         MENUITEM "  (&8)未定義",                IDM_CT_S18, GRAYED
         MENUITEM "  (&9)未定義",                IDM_CT_S19, GRAYED
         MENUITEM SEPARATOR
-        MENUITEM "(&0)音符無しNOTEをｸﾘｱ¥tCtrl+0", IDM_CT_S20
+        MENUITEM "(&0)音符無しNOTEをｸﾘｱ\tCtrl+0", IDM_CT_S20
     END
     MENUITEM "|",                           IDM_DUMMY_TATE_SEPARATOR, GRAYED
     POPUP "譜面操作(&O)"
     BEGIN
         MENUITEM "カレントトラック",            ID_MENUITEM40145, INACTIVE
-        MENUITEM "  パンを右にずらす(&R)¥tShift+Ctrl+R", IDM_CT_PAN_R
-        MENUITEM "  パンを左にずらす(&L)¥tShift+Ctrl+L", IDM_CT_PAN_L
-        MENUITEM "  パンを左右逆転(&G)¥tCtrl+Alt+R", IDM_CT_PAN_REVERSE
-        MENUITEM "  ボリュームを上げる(&H)¥tF11", IDM_CT_VOL_PLUS
-        MENUITEM "  ボリュームを下げる(&K)¥tF12", IDM_CT_VOL_MINUS
-        MENUITEM "  ボリュームを12.5%上げる(&I)¥tShift+Ctrl+F11", 
+        MENUITEM "  パンを右にずらす(&R)\tShift+Ctrl+R", IDM_CT_PAN_R
+        MENUITEM "  パンを左にずらす(&L)\tShift+Ctrl+L", IDM_CT_PAN_L
+        MENUITEM "  パンを左右逆転(&G)\tCtrl+Alt+R", IDM_CT_PAN_REVERSE
+        MENUITEM "  ボリュームを上げる(&H)\tF11", IDM_CT_VOL_PLUS
+        MENUITEM "  ボリュームを下げる(&K)\tF12", IDM_CT_VOL_MINUS
+        MENUITEM "  ボリュームを12.5%上げる(&I)\tShift+Ctrl+F11", 
                                                 IDM_CT_VOLWARIAI_UP
-        MENUITEM "  ボリュームを12.5%下げる(&J)¥tShift+Ctrl+F12", 
+        MENUITEM "  ボリュームを12.5%下げる(&J)\tShift+Ctrl+F12", 
                                                 IDM_CT_VOLWARIAI_DOWN
-        MENUITEM "  キーを高くする(&U)¥tShift+Ctrl+U", IDM_CT_TRANS_UP
-        MENUITEM "  キーを低くする(&D)¥tShift+Ctrl+D", IDM_CT_TRANS_DOWN
-        MENUITEM "  キーをオクターヴ上げる(&O)¥tCtrl+Alt+U", IDM_CT_OCT_UP
-        MENUITEM "  キーをオクターヴ下げる(&N)¥tCtrl+Alt+D", IDM_CT_OCT_DOWN
+        MENUITEM "  キーを高くする(&U)\tShift+Ctrl+U", IDM_CT_TRANS_UP
+        MENUITEM "  キーを低くする(&D)\tShift+Ctrl+D", IDM_CT_TRANS_DOWN
+        MENUITEM "  キーをオクターヴ上げる(&O)\tCtrl+Alt+U", IDM_CT_OCT_UP
+        MENUITEM "  キーをオクターヴ下げる(&N)\tCtrl+Alt+D", IDM_CT_OCT_DOWN
         MENUITEM SEPARATOR
         MENUITEM "メロディトラック全体",        ID_MENUITEM40146, INACTIVE
         MENUITEM "  パンを右にずらす(&R)",      IDM_ML_PAN_R
         MENUITEM "  パンを左にずらす(&L)",      IDM_ML_PAN_L
-        MENUITEM "  ボリュームを上げる(&U)¥tShift+F11", IDM_ML_VOL_PLUS
-        MENUITEM "  ボリュームを下げる(&D)¥tShift+F12", IDM_ML_VOL_MINUS
-        MENUITEM "  キーを高くする(&H)¥tShift+Ctrl+H", IDM_ML_TRANS_UP
-        MENUITEM "  キーを低くする(&K)¥tShift+Ctrl+N", IDM_ML_TRANS_DOWN
+        MENUITEM "  ボリュームを上げる(&U)\tShift+F11", IDM_ML_VOL_PLUS
+        MENUITEM "  ボリュームを下げる(&D)\tShift+F12", IDM_ML_VOL_MINUS
+        MENUITEM "  キーを高くする(&H)\tShift+Ctrl+H", IDM_ML_TRANS_UP
+        MENUITEM "  キーを低くする(&K)\tShift+Ctrl+N", IDM_ML_TRANS_DOWN
         MENUITEM SEPARATOR
         MENUITEM "ドラムトラック全体",          ID_MENUITEM40147, INACTIVE
-        MENUITEM "  ボリュームを上げる(&U)¥tCtrl+F11", IDM_DR_VOL_PLUS
-        MENUITEM "  ボリュームを下げる(&D)¥tCtrl+F12", IDM_DR_VOL_MINUS
+        MENUITEM "  ボリュームを上げる(&U)\tCtrl+F11", IDM_DR_VOL_PLUS
+        MENUITEM "  ボリュームを下げる(&D)\tCtrl+F12", IDM_DR_VOL_MINUS
         MENUITEM SEPARATOR
         POPUP "分解能変更(&N)"
         BEGIN
@@ -1059,24 +1059,24 @@ BEGIN
     POPUP "環境(&C)"
     BEGIN
         MENUITEM "表示",                        IDM_DUMMY, INACTIVE
-        MENUITEM "   X軸方向拡大表示(&B)¥tF7",  IDM_LOUPE_PLUS
-        MENUITEM "   X軸方向縮小表示(&M)¥tF8",  IDM_LOUPE_MINUS
+        MENUITEM "   X軸方向拡大表示(&B)\tF7",  IDM_LOUPE_PLUS
+        MENUITEM "   X軸方向縮小表示(&M)\tF8",  IDM_LOUPE_MINUS
         MENUITEM "   縮小表示時、音符の頭を目立たせる(&O)", IDM_NOTE_ENLARGE
-        MENUITEM "   全てのトラックを表示 (ゴースト表示)¥tCtrl+F9", 
+        MENUITEM "   全てのトラックを表示 (ゴースト表示)\tCtrl+F9", 
                                                 IDM_DRAWDOUBLE
-        MENUITEM "   Trackごとに音符のy座標を少しずらす(&T)¥tShift+F9", 
+        MENUITEM "   Trackごとに音符のy座標を少しずらす(&T)\tShift+F9", 
                                                 IDM_SLIDEOVERLAPNOTES
         MENUITEM SEPARATOR
         MENUITEM "ウィンドウ・ダイアログ",      IDM_DUMMY, INACTIVE
-        MENUITEM "   範囲選択オペレータ表示／非表示(&V)¥tF9", 
+        MENUITEM "   範囲選択オペレータ表示／非表示(&V)\tF9", 
                                                 IDM_EZCOPYVISIBLE
         MENUITEM "   終了時に確認ﾒｯｾｰｼﾞを表示(&S)", IDM_CHANGEFINISH
         MENUITEM SEPARATOR
         MENUITEM "操作",                        IDM_DUMMY, INACTIVE
-        MENUITEM "   ｸﾞﾘｯﾄﾞ(拍)単位で選択(&G)¥tCtrl+G", IDM_GRIDMODE
-        MENUITEM "   常にｶﾚﾝﾄﾄﾗｯｸがﾀｰｹﾞｯﾄ(&C)¥tCtrl+T", IDM_ALWAYS_CURRENT
-        MENUITEM "   ﾄﾞﾗｯｸﾞで音符を伸ばす(&E)¥tCtrl+Alt+F9", IDM_DRAGMODE
-        MENUITEM "   音符の頭ｸﾘｯｸで長さを変える(&O)¥tCtrl+Alt+F10", 
+        MENUITEM "   ｸﾞﾘｯﾄﾞ(拍)単位で選択(&G)\tCtrl+G", IDM_GRIDMODE
+        MENUITEM "   常にｶﾚﾝﾄﾄﾗｯｸがﾀｰｹﾞｯﾄ(&C)\tCtrl+T", IDM_ALWAYS_CURRENT
+        MENUITEM "   ﾄﾞﾗｯｸﾞで音符を伸ばす(&E)\tCtrl+Alt+F9", IDM_DRAGMODE
+        MENUITEM "   音符の頭ｸﾘｯｸで長さを変える(&O)\tCtrl+Alt+F10", 
                                                 IDM_PRESSNOTE
         MENUITEM "   演奏中に鍵盤を弾けるようにする(&P)", IDM_ENABLEPLAYING
         MENUITEM SEPARATOR
@@ -1093,7 +1093,7 @@ BEGIN
     END
     POPUP "メモ(&M)"
     BEGIN
-        MENUITEM "簡易ヘルプ(&H)...¥tCtrl+Alt+H", IDM_DLGHELP
+        MENUITEM "簡易ヘルプ(&H)...\tCtrl+Alt+H", IDM_DLGHELP
         MENUITEM SEPARATOR
         MENUITEM "バージョン情報(&V)...",       IDM_DLGMEMO
     END
@@ -1217,18 +1217,18 @@ BEGIN
     BEGIN
         BLOCK "041104b0"
         BEGIN
-            VALUE "Comments", "つくりが粗い部分は見逃してください。¥0"
-            VALUE "CompanyName", "余計な味がしない。¥0"
-            VALUE "FileDescription", "Organya Twei¥0"
-            VALUE "FileVersion", "2.1.1¥0"
-            VALUE "InternalName", "¥0"
-            VALUE "LegalCopyright", "Copyright (C) 2005-2014 Pixel and Rxo Inverse¥0"
-            VALUE "LegalTrademarks", "¥0"
-            VALUE "OriginalFilename", "Org211.exe¥0"
-            VALUE "PrivateBuild", "¥0"
-            VALUE "ProductName", "オルガーニャ２¥0"
-            VALUE "ProductVersion", "2.1.1¥0"
-            VALUE "SpecialBuild", "¥0"
+            VALUE "Comments", "つくりが粗い部分は見逃してください。\0"
+            VALUE "CompanyName", "余計な味がしない。\0"
+            VALUE "FileDescription", "Organya Twei\0"
+            VALUE "FileVersion", "2.1.1\0"
+            VALUE "InternalName", "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2005-2014 Pixel and Rxo Inverse\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Org211.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "オルガーニャ２\0"
+            VALUE "ProductVersion", "2.1.1\0"
+            VALUE "SpecialBuild", "\0"
         END
     END
     BLOCK "VarFileInfo"
@@ -1450,7 +1450,7 @@ BEGIN
     IDS_ERROR_WAIT          "Error (ウエイト)"
     IDS_INFO_CLEAR          "消去しました"
     IDS_INFO_INITIALIZE     "真っ白になったぜ。"
-    IDS_INFO_MEMORY         "長時間の使用により、ノート（音符）がメモリ上に¥n散乱してしまいます。（譜面順とメモリ順は異なっている）¥nこの関数はノートを譜面の順番に¥n並べ換えます。¥n尚、データをロードし直しても同じ効果が得られます。¥n実行しますか？"
+    IDS_INFO_MEMORY         "長時間の使用により、ノート（音符）がメモリ上に\n散乱してしまいます。（譜面順とメモリ順は異なっている）\nこの関数はノートを譜面の順番に\n並べ換えます。\n尚、データをロードし直しても同じ効果が得られます。\n実行しますか？"
     IDS_INFO_NARABEKAE      "並べ替え・再構築しました。"
     IDS_INFO_SAME_FILE      "同じ名前のファイルがあります"
     IDS_INFO_TITLE_FREQ     "お知らせ (周波数)"
