@@ -62,6 +62,6 @@ set(CMAKE_RC_COMPILER llvm-rc)
 # code page (-C) 932 is shift JIS, we need to override with UTF-8 (65001)
 set(CMAKE_RC_COMPILE_OBJECT "<CMAKE_RC_COMPILER> <DEFINES> -I ${CMAKE_INCLUDE_PATH} -C 65001 ${rc_flags} -FO <OBJECT> <SOURCE>")
 
-add_executable(organya ${PROJECT_SOURCES} ${PROJECT_RESOURCES})
+add_executable(organya WIN32 ${PROJECT_SOURCES} ${PROJECT_RESOURCES})
 # gleaned from ntldd on the provided exe
 target_link_libraries(organya dsound winmm kernel32 gdi32 comdlg32 shell32)
