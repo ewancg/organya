@@ -25,20 +25,20 @@ set(PROJECT_SOURCES
     ./source/WinTimer.cpp
 )
 
-set(PROJECT_HEADERS
-    ./source/Click.h
-    ./source/DefOrg.h
-    ./source/Filer.h
-    ./source/Gdi.h
-    ./source/Mouse.h
-    ./source/OrgData.h
-    ./source/resource.h
-    ./source/rxoFunction.h
-    ./source/Scroll.h
-    ./source/Setting.h
-    ./source/Sound.h
-    ./source/Timer.h
-)
+# set(PROJECT_HEADERS
+#     ./source/Click.h
+#     ./source/DefOrg.h
+#     ./source/Filer.h
+#     ./source/Gdi.h
+#     ./source/Mouse.h
+#     ./source/OrgData.h
+#     ./source/resource.h
+#     ./source/rxoFunction.h
+#     ./source/Scroll.h
+#     ./source/Setting.h
+#     ./source/Sound.h
+#     ./source/Timer.h
+# )
 
 # we need to create a .rc which wraps the .manifest in order for GCC to understand
 set(MANIFEST_RC "${CMAKE_CURRENT_BINARY_DIR}/manifest.rc")
@@ -49,25 +49,21 @@ set(PROJECT_RESOURCES
     ${MANIFEST_RC}
 )
 
-add_compile_definitions(
-    BOOL=bool
-)
+# NOT KOSHER but it's unset on my system for some reason
+if(NOT CMAKE_SYSTEM_INCLUDE_PATH)
+  set(CMAKE_SYSTEM_INCLUDE_PATH "C:/msys64/ucrt64/include")
+endif()
 
 # ld can't handle llvm-rc's swag
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fuse-ld=lld")
-
-# this is unset on my system for some reason
-set(CMAKE_INCLUDE_PATH "C:/msys64/ucrt64/include")
 
 # gnu windres can't handle the swag
 set(CMAKE_RC_COMPILER llvm-rc)
 
 # code page (-C) 932 is shift JIS, we need to override with UTF-8 (65001)
-set(CMAKE_RC_COMPILE_OBJECT "<CMAKE_RC_COMPILER> <DEFINES> -I ${CMAKE_INCLUDE_PATH} -C 65001 ${rc_flags} -FO <OBJECT> <SOURCE>")
+set(CMAKE_RC_COMPILE_OBJECT "<CMAKE_RC_COMPILER> <DEFINES> -I ${CMAKE_SYSTEM_INCLUDE_PATH} -C 65001 ${rc_flags} -FO <OBJECT> <SOURCE>")
 
 add_executable(organya WIN32 ${PROJECT_SOURCES} ${PROJECT_RESOURCES})
-set_target_properties(organya PROPERTIES
-  RESOURCE "${RESOURCE_FILES}"
-)
+
 # gleaned from ntldd on the provided exe
 target_link_libraries(organya dsound winmm kernel32 gdi32 comdlg32 shell32)
